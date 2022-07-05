@@ -8,9 +8,8 @@
 
     <EditText
         android:id="@+id/time"
-        android:layout_width="200sp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:ems="10"
         android:hint="hh:mm"
         android:inputType="time"
@@ -21,7 +20,7 @@
 
     <EditText
         android:id="@+id/date"
-        android:layout_width="200sp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="dd/mm/yy"
@@ -32,5 +31,60 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/syspr"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="syspressure"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/diaspr"
+        app:layout_constraintHorizontal_bias="0.544"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <TextView
+        android:id="@+id/diaspr"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="60dp"
+        android:text="diaspressure"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/systxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="70dp"
+        android:text="Systolic:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/diastxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="8dp"
+        android:text="Diastolic"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/diaspr"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </android.support.constraint.ConstraintLayout>

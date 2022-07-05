@@ -1,17 +1,17 @@
 package com.example.cardiacrecorder;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
-
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+{
     private RecyclerView measurementlist;
 
     @Override

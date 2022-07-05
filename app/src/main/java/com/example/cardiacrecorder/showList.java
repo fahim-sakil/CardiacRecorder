@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -34,6 +35,8 @@ public class showList extends RecyclerView.Adapter<showList.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.date.setText(MeasurementList.get(position).getDate());
         holder.time.setText(MeasurementList.get(position).getTime());
+        holder.syspr.setText(Integer.toString(MeasurementList.get(position).getSystolicPressure()));
+        holder.diaspr.setText(Integer.toString(MeasurementList.get(position).getDiastolicPressure()));
     }
 
     @Override
@@ -49,11 +52,15 @@ public class showList extends RecyclerView.Adapter<showList.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder{
         private EditText date;
         private EditText time;
+        private TextView syspr;
+        private TextView diaspr;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             date=itemView.findViewById(R.id.date);
             time=itemView.findViewById(R.id.time);
+            syspr=itemView.findViewById(R.id.syspr);
+            diaspr=itemView.findViewById(R.id.diaspr);
         }
     }
 }
